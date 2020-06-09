@@ -4,8 +4,8 @@ class Person
   :wrist_size, :glove_size, :pant_length, :pant_width
   @@all = []
 
-  def initialize(attributes=nil)
-    attributes.each { |k,v| self.send("#{k}=", v)} if attributes
+  def initialize(attributes)
+    attributes.each { |k,v| self.send"#{k}=", v} if attributes
     @@all << self
   end
 end

@@ -5,7 +5,7 @@ class Person
   @@all = []
 
   def initialize(attributes)
-    attributes.each { |k,v| self.send"#{k}=", v} if attributes
+    attributes.each { |k,v| self.send"#{k}=", v }
     @@all << self
   end
 end
